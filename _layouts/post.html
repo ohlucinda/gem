@@ -25,31 +25,32 @@ layout: default
     }
     
     /* 全体を包む箱：ここで「左端」の基準を決めます */
+    /* 1. 全体を包むコンテナを中央に固定する */
     .content {
-      max-width: 500px;    /* 画像の幅と合わせます */
+      max-width: 500px; /* 画像の幅と統一 */
+      width: 90%;       /* スマホなどで左右に少し余白を作る */
+      margin-left: auto;  /* これが「中央に置く」ための必須設定 */
+      margin-right: auto; /* これが「中央に置く」ための必須設定 */
+      text-align: left;
+    }
+
+    /* 2. 画像枠の設定 */
+    .image-wrapper {
       width: 100%;
-      margin-left: auto;   /* 画面全体の中央に配置したい場合 */
-      margin-right: auto; 
-      text-align: left;    /* 中身はすべて左に寄せる */
+      aspect-ratio: 5 / 7;
+      margin-left: 0;   /* コンテナの左端に合わせる */
+      margin-bottom: 80px;
+      overflow: hidden;
+      display: block;
+      position: relative;
     }
 
-    h1 {
-      font-family: "jimbo-std-expanded", sans-serif;
-      font-weight: 700;
-      font-size: 2.2rem;
-      margin-top: 0;
-      margin-bottom: 80px; 
-      text-align: left;    /* タイトルを左に */
-    }
-
-    /* 画像の枠 */
+    /* 3. 画像自体の見え方（ドアップを防ぐ） */
     .image-wrapper img {
       width: 100% !important;
       height: 100% !important;
-      /* cover から contain に変更：これで画像が枠内に必ず収まります */
-      object-fit: contain; 
-      /* 背景を白にしておくと、隙間ができても目立ちません */
-      background-color: #ffffff; 
+      object-fit: contain; /* 切り取らず、全体を表示する */
+      object-position: left center; /* 左端に揃えて中央に配置 */
       display: block;
     }
 
