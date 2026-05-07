@@ -26,34 +26,42 @@ layout: default
     
     /* 全体を包む箱：ここで「左端」の基準を決めます */
     /* 1. 全体を包むコンテナを中央に固定する */
+    /* 1. まず、土台を画面の中央に配置する */
     .content {
-      max-width: 500px; /* 画像の幅と統一 */
-      width: 90%;       /* スマホなどで左右に少し余白を作る */
-      margin-left: auto;  /* これが「中央に置く」ための必須設定 */
-      margin-right: auto; /* これが「中央に置く」ための必須設定 */
-      text-align: left;
+      max-width: 500px; /* 画像の最大幅 */
+      width: 100%;      
+      margin: 0 auto;   /* これで箱自体が画面の真ん中に固定されます */
+      padding: 0 20px;  /* 画面端にピッタリくっつくのを防ぐ予白 */
+      box-sizing: border-box;
+      text-align: left; /* 中身は基本左揃え */
     }
 
-    /* 2. 画像枠の設定 */
+    /* 2. 画像の枠（土台の幅いっぱいに広がる） */
     .image-wrapper {
-      width: 100%;
+      width: 100%;      /* .contentの幅（最大500px）に合わせる */
       aspect-ratio: 5 / 7;
-      margin-left: 0;   /* コンテナの左端に合わせる */
       margin-bottom: 80px;
       overflow: hidden;
       display: block;
       position: relative;
     }
 
-    /* 3. 画像自体の見え方（ドアップを防ぐ） */
+    /* 3. 画像：ドアップを防ぎ、枠の左上にピタッと合わせる */
     .image-wrapper img {
       width: 100% !important;
       height: 100% !important;
-      object-fit: contain; /* 切り取らず、全体を表示する */
-      object-position: left center; /* 左端に揃えて中央に配置 */
+      object-fit: contain;  /* 画像を潰さず、枠内に収める */
+      object-position: left top; /* 枠の左上に基準を置く */
       display: block;
     }
 
+    /* 4. タイトル（画像の左端と揃う） */
+    h1 {
+      font-family: "jimbo-std-expanded", sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 80px;
+      text-align: left; 
+    }
     .poem {
       font-size: 1.1rem;
       text-align: left;    /* 本文も左に */
