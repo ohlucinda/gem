@@ -15,47 +15,50 @@ layout: default
       line-height: 1.8;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: center; /* 骨組みは中央に置きつつ */
       margin: 0;
-      padding: 50px 20px;
+      padding: 80px 20px;
     }
+    
     .content {
-      max-width: 600px;
+      max-width: 600px; /* この幅の中で */
       width: 100%;
-      text-align: center;
+      text-align: left; /* すべてを左に揃える */
     }
 
-    /* タイトルの設定 */
     h1 {
       font-size: 1.6rem;
-      margin-bottom: 25px; /* タイトルと写真の距離 */
+      margin-top: 0;
+      margin-bottom: 30px;
       letter-spacing: 0.12em;
+      text-align: left; /* タイトルを左へ */
     }
 
     img {
-      max-width: 70%;
+      max-width: 80%;
       height: auto;
-      margin: 0 auto 25px; /* 写真とポエムの距離 */
+      margin: 0 0 30px 0; /* 写真を左に寄せて下に余白 */
       display: block;
       border-radius: 2px;
     }
 
     .poem {
       font-size: 1.15rem;
+      color: #555;
       margin-top: 0;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       white-space: pre-wrap;
-      text-align: left;
-      display: inline-block;
+      text-align: left; /* 本文を左へ */
+      display: block;
     }
 
     .navigation {
       margin-top: 50px;
-      margin-bottom: 50px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start; /* ボタンも左へ */
       gap: 20px;
     }
+
     .nav-button {
       text-decoration: none;
       color: #666;
@@ -64,9 +67,12 @@ layout: default
       border-radius: 5px;
       font-size: 0.9rem;
     }
+
     footer {
+      margin-top: 50px;
       font-size: 0.8rem;
       color: #999;
+      text-align: left; /* コピーライトも左へ */
     }
   </style>
 </head>
