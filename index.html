@@ -16,22 +16,28 @@ layout: null
   }
 
   .intro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding-top: 140px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 600;
   letter-spacing: 0.16em;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 p {
   color: var(--text);
   font-size: 1rem;
   letter-spacing: 0.08em;
-  margin-bottom: 70px;
+  margin-bottom: 72px;
 }
 
 .walk-link {
@@ -70,11 +76,11 @@ p {
   }
 
   footer {
-    margin-top: 160px;
-    font-size: 0.8rem;
-    color: #999;
-    letter-spacing: 0.08em;
-  }
+  margin-top: 140px;
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 0.08em;
+}
 
   @media (max-width: 768px) {
     .intro {
