@@ -19,10 +19,10 @@ layout: null
     }
 
     .content {
-      /* 500pxの幅を中央に固定 */
+      /* 500pxの幅を、数学的な中央に配置 */
       width: 500px;
       max-width: calc(100% - 40px);
-      margin: 150px auto 100px auto; /* 天井から150px、左右中央 */
+      margin: 150px auto 100px auto; /* 天井から150px下げ、左右は自動で中央 */
       display: block;
     }
 
@@ -37,12 +37,13 @@ layout: null
     .image-wrapper {
       width: 100%;
       margin: 0 0 80px 0;
-      /* ここで高さを固定せず、中身の画像に任せます */
+      display: block;
     }
 
     .image-wrapper img {
-      width: 100% !important;
-      height: auto !important; /* これがSafariとChrome共通の復活の鍵です */
+      /* 最初に出ていた時の設定に戻し、Safari対策の height:auto だけ追加 */
+      width: 100%;
+      height: auto !important; 
       display: block;
     }
 
