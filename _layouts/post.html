@@ -8,8 +8,8 @@ layout: null
   <title>{{ page.title }} | gem</title>
   <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
   
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <style>
     body {
@@ -41,7 +41,7 @@ layout: null
 
     .image-wrapper img {
       width: 100% !important;
-      height: auto !important; 
+      height: auto !important; /* Safariの消失対策 */
       display: block;
     }
 
@@ -51,7 +51,6 @@ layout: null
       white-space: pre-wrap;
       color: #111;
       text-align: left;
-      margin-bottom: 120px; /* 本文とフッターの間の余白 */
     }
 
     footer {
