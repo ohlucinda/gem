@@ -13,26 +13,28 @@ layout: default
   <style>
     body {
       margin: 0;
-      padding: 0;
+      /* padding: 0; をやめて、上にしっかり余白を作ります */
+      padding-top: 100px; 
+      padding-bottom: 100px;
       display: flex;
       flex-direction: column;
-      align-items: center; /* これが「数学的な中央」を決定します */
+      align-items: center; 
       min-height: 100vh;
+      box-sizing: border-box; /* 余白を含めて計算するように指定 */
     }
 
     .content {
-      /* ここで「写真と同じ幅」を厳格に指定します */
       width: 500px; 
-      max-width: 90vw; /* 画面が狭い時も中央を保つためのクッション */
-      
-      /* 左右の余白をブラウザに自動計算させ、完全に均等にします */
+      max-width: 90vw;
+      /* margin-left/right: auto はそのままでOK */
       margin-left: auto;
       margin-right: auto;
-      
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* 塊の中では左に揃える */
+      align-items: flex-start;
     }
+
+    /* h1 の margin-top: 0; はそのままで、body の padding で位置を下げます */
 
     .image-wrapper {
       width: 100%; /* .contentの500pxを100%使う */
