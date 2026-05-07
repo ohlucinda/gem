@@ -104,12 +104,12 @@ p {
 <div class="intro">
   <h1>gem</h1>
 
-  <p>散歩と、写真と、短い言葉。</p>
+  <p>写真と、短い言葉。</p>
 
   <div>
     {% for post in site.posts limit:1 %}
       <a href="{{ post.url | relative_url }}" class="walk-link">
-        散歩をはじめる
+        begin
       </a>
     {% endfor %}
   </div>
