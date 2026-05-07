@@ -6,7 +6,7 @@ layout: default
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>gem</title>
+  <title>{{ page.title }} | gem</title>
   
   <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
 
@@ -38,20 +38,24 @@ layout: default
       letter-spacing: 0.02em;
     }
 
-    /* 写真の比率を 5:7 に固定 */
+    /* 5:7 の画像コンテナ */
     .image-container {
       width: 100%;
       aspect-ratio: 5 / 7; 
       margin-bottom: 30px;
       overflow: hidden;
-      background-color: #f9f9f9; /* 読み込み中や画像がない時のための薄いグレー */
     }
 
     .image-container img {
       width: 100%;
       height: 100%;
-      object-fit: cover; /* 枠に合わせて自動でクロップ */
+      object-fit: cover;
       display: block;
+    }
+
+    /* 画像がない時に変な枠線や隙間を出さないための処理 */
+    .image-container:empty, .image-container img[src=""], .image-container img:not([src]) {
+      display: none;
     }
 
     .poem {
@@ -91,12 +95,14 @@ layout: default
   <div class="content">
     <h1>{{ page.title }}</h1>
     
+    {% if page.image %}
     <div class="image-container">
        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
     </div>
+    {% endif %}
 
     <div class="poem">
-      {{ content }}
+      {{ content | remove: page.title }}
     </div>
 
     <div class="navigation">
