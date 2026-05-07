@@ -112,26 +112,34 @@ layout: null
     font-weight: 400;
   }
 
+  /* --- index.html の media 部分を上書きしてください --- */
+
   @media (max-width: 768px) {
+    /* 1. ページ全体の上の余白を詰める */
     .intro {
-      padding: 30px 24px;
+      padding: 0px 24px;   /* 60pxから0pxへ。画面上部へ近づけます */
     }
 
+    /* 2. タイトルの大きさと位置を調整 */
     h1 {
-      font-size: 3.8rem;
+      font-size: 2.2rem;   /* 3.8remだと大きすぎるので、シュッとさせます */
+      margin-top: 0;       /* もし上に隙間があるなら0に */
+      margin-bottom: 20px; /* 90pxから20pxへ。タイトルと写真を近づけます */
+      text-align: center;  /* もし右のように真ん中に寄せたければ追加 */
     }
 
+    /* 3. タイトル下の要素の位置を調整 */
     p {
-      font-size: 1.15rem;
-      margin-bottom: 90px;
+      margin-bottom: 40px; /* 90pxから40pxへ。間延びをなくします */
     }
 
+    /* 以下は元の設定のままでOK */
     .walk-link {
       font-size: 1.4rem;
     }
 
     footer {
-      margin-top: 160px;
+      margin-top: 100px;   /* フッターも少し上に引き上げる */
       font-size: 0.95rem;
     }
   }
