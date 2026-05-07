@@ -113,7 +113,7 @@ p {
 
   <div>
     {% for post in site.posts limit:1 %}
-      <a href="{{ post.url }}" class="walk-link">
+      <a href="{{ post.url | relative_url }}" class="walk-link">
         散歩をはじめる
       </a>
     {% endfor %}
