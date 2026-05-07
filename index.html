@@ -4,37 +4,46 @@ layout: default
 
 <style>
   :root {
-    --accent: #4a4a8a;
+    --accent: #222;
     --text: #666;
-    --line: #cfcfe3;
-    --line-hover: #4a4a8a;
+    --line: #d8d8d8;
+    --line-hover: #222;
+    --bg: #f7f7f5;
+  }
+
+  body {
+    background: var(--bg);
   }
 
   .intro {
     text-align: center;
-    padding: 120px 20px;
+    padding: 180px 20px 140px;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 3.2rem;
+    font-weight: 600;
     color: var(--accent);
-    letter-spacing: 0.12em;
-    margin-bottom: 18px;
+    letter-spacing: 0.14em;
+    margin-bottom: 28px;
   }
 
   p {
     color: var(--text);
-    letter-spacing: 0.05em;
-    margin-bottom: 60px;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+    line-height: 2;
+    margin-bottom: 80px;
   }
 
   .walk-link {
     position: relative;
     display: inline-block;
-    color: #333;
+    color: var(--accent);
     text-decoration: none;
-    letter-spacing: 0.05em;
-    padding-bottom: 8px;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    padding-bottom: 10px;
     transition: color 0.3s ease;
   }
 
@@ -50,7 +59,7 @@ layout: default
   }
 
   .walk-link:hover {
-    color: var(--accent);
+    color: #555;
   }
 
   .walk-link:hover::after {
@@ -58,10 +67,33 @@ layout: default
   }
 
   footer {
-    margin-top: 120px;
+    margin-top: 160px;
     font-size: 0.8rem;
     color: #999;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 768px) {
+    .intro {
+      padding: 140px 20px 100px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 60px;
+    }
+
+    .walk-link {
+      font-size: 1rem;
+    }
+
+    footer {
+      margin-top: 120px;
+    }
   }
 </style>
 
