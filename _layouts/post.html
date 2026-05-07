@@ -8,8 +8,8 @@ layout: null
   <title>{{ page.title }} | gem</title>
   <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
   
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     body {
@@ -17,70 +17,53 @@ layout: null
       padding: 0;
       background-color: #ffffff;
     }
-
     .content {
       width: 500px;
       max-width: calc(100% - 40px);
       margin: 150px auto 100px auto; 
       display: block;
     }
-
     h1 {
       font-family: "jimbo-std-expanded", sans-serif;
       font-size: 2.2rem;
       margin: 0 0 80px 0;
       line-height: 1.2;
-      text-align: left;
     }
-
     .image-wrapper {
       width: 100%;
       margin: 0 0 80px 0;
-      display: block;
     }
-
     .image-wrapper img {
       width: 100% !important;
-      height: auto !important; /* Safariの消失対策 */
+      height: auto !important;
       display: block;
     }
-
     .poem {
       font-size: 1.15rem;
       line-height: 1.8;
       white-space: pre-wrap;
       color: #111;
-      text-align: left;
     }
-
     footer {
       font-family: "jimbo-std-expanded", sans-serif;
       font-size: 1.1rem;
-      color: #111;
-      text-align: left;
       margin-top: 100px;
       padding-bottom: 80px;
     }
   </style>
 </head>
 <body>
-
   <div class="content">
     <h1>{{ page.title }}</h1>
-
     <div class="image-wrapper">
-      <img src="{{ page.image }}">
       <img src="/{{ page.image }}">
     </div>
-
     <div class="poem">
 {{ content }}
     </div>
-
     <footer>
       © 2026 gem
     </footer>
   </div>
-
 </body>
 </html>
