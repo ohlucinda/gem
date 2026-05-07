@@ -13,63 +13,47 @@ layout: default
   <style>
     body {
       margin: 0;
-      /* padding: 0; をやめて、上にしっかり余白を作ります */
-      padding-top: 100px; 
-      padding-bottom: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      min-height: 100vh;
-      box-sizing: border-box; /* 余白を含めて計算するように指定 */
+      /* 天井からの距離をここで確保。120pxほど下げます */
+      padding: 120px 20px; 
+      /* 中身を中央に置くための最も古典的で確実な方法 */
+      text-align: center; 
+      background-color: #ffffff;
     }
 
     .content {
-      width: 500px; 
-      max-width: 90vw;
-      /* margin-left/right: auto はそのままでOK */
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      /* 500pxの幅を中央に固定。左右の auto が均等に余白を配分します */
+      width: 500px;
+      max-width: 100%;
+      margin: 0 auto;
+      /* 中身（タイトルと画像）の左端をビシッと揃える */
+      display: inline-block; 
+      text-align: left;
     }
 
-    /* h1 の margin-top: 0; はそのままで、body の padding で位置を下げます */
-
-    .image-wrapper {
-      width: 100%; /* .contentの500pxを100%使う */
-      aspect-ratio: 5 / 7;
-      margin-top: 120px;
+    h1 {
+      font-family: "jimbo-std-expanded", sans-serif;
+      font-size: 2.2rem;
+      margin-top: 0;
       margin-bottom: 80px;
       display: block;
     }
 
+    .image-wrapper {
+      width: 100%;
+      /* Safari対策：aspect-ratio だけに頼らず、高さを自動にする */
+      margin-bottom: 80px;
+    }
+
     .image-wrapper img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto; /* Safari消失対策：ここをautoに */
       display: block;
     }
 
-    /* 4. タイトル（画像の左端と揃う） */
-    h1 {
-      font-family: "jimbo-std-expanded", sans-serif; /* 書体：これは絶対必要 */
-      font-size: 2.2rem;                            /* サイズ：これも必要 */
-      margin-top: 0;                                 /* 上の余白をリセット */
-      margin-bottom: 80px;                          /* 画像との距離：重要 */
-      
-      /* text-align: left; は、親要素の .content が 
-         align-items: flex-start; になっていれば、書かなくても自動で左に揃います */
-    }
     .poem {
       font-size: 1.1rem;
-      text-align: left;    /* 本文も左に */
+      line-height: 1.8;
       white-space: pre-wrap;
-    }
-
-    /* Jekyllが自動挿入する重複画像を隠す */
-    .poem img {
-      display: none !important;
     }
 
     .navigation {
