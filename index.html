@@ -6,8 +6,9 @@ layout: null
 <html lang="ja">
 <head>
   <script>
-  if (screen.width <= 700 || window.innerWidth <= 700) {
-    window.location.replace('sp.html');
+  if (window.innerWidth <= 700) {
+    // 最後に /sp.html とはっきり指定します
+    window.location.href = window.location.origin + '/sp.html';
   }
 </script>
   <meta charset="UTF-8">
