@@ -5,62 +5,64 @@ layout: null
 <style>
   :root {
     --accent: #222;
-    --text: #666;
-    --line: #d8d8d8;
+    --text: #222;
+    --line: #999;
     --line-hover: #222;
     --bg: #f7f7f5;
   }
 
   body {
+    margin: 0;
     background: var(--bg);
   }
 
   .intro {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 30px;
+    box-sizing: border-box;
+  }
 
-h1 {
-  font-size: 4rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  margin-bottom: 20px;
-}
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    margin-bottom: 20px;
+    color: var(--accent);
+  }
 
-p {
-  color: var(--text);
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  margin-bottom: 72px;
-}
- 
-.walk-link {
-  position: relative;
-  display: inline-block;
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 1.15rem;
-  letter-spacing: 0.08em;
-  padding-bottom: 12px;
-  transition: color 0.3s ease;
-}
+  p {
+    color: var(--text);
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 84px;
+  }
 
-.walk-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: #999;
-  transition: background 0.3s ease;
-}
+  .walk-link {
+    position: relative;
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    padding-bottom: 12px;
+    transition: color 0.3s ease;
+  }
+
+  .walk-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--line);
+    transition: background 0.3s ease;
+  }
 
   .walk-link:hover {
     color: #555;
@@ -71,32 +73,33 @@ p {
   }
 
   footer {
-  margin-top: 140px;
-  font-size: 0.8rem;
-  color: #999;
-  letter-spacing: 0.08em;
-}
+    margin-top: 160px;
+    font-size: 0.95rem;
+    color: #222;
+    letter-spacing: 0.08em;
+  }
 
   @media (max-width: 768px) {
     .intro {
-      padding: 140px 20px 100px;
+      padding: 100px 24px 80px;
     }
 
     h1 {
-      font-size: 2.4rem;
+      font-size: 3rem;
     }
 
     p {
       font-size: 1rem;
-      margin-bottom: 60px;
+      margin-bottom: 64px;
     }
 
     .walk-link {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     footer {
       margin-top: 120px;
+      font-size: 0.85rem;
     }
   }
 </style>
