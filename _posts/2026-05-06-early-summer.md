@@ -4,8 +4,6 @@ title: "初夏"
 image: "/german-iris.jpg"
 ---
 
-（本文）
-
 いつもの歩道
 いつもの段差
 
