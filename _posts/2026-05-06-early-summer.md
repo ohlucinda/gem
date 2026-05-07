@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 初夏
-subtitle: 散歩の途中で
 ---
 
 ![ジャーマンアイリス]({{ site.baseurl }}/IMG_1681.jpg)
