@@ -7,11 +7,15 @@ layout: default
 <head>
   <meta charset="UTF-8">
   <title>gem</title>
+  
+  <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
+
   <style>
     body {
       background-color: #ffffff; /* 背景を白に */
       color: #333;
-      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      /* 英数字はプロジェクトのフォント、日本語はゴシック体（明朝体以外）を指定 */
+      font-family: "adobe-caslon-pro", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; 
       line-height: 1.8;
       display: flex;
       flex-direction: column;
@@ -27,14 +31,16 @@ layout: default
     }
 
     h1 {
-      font-size: 2rem; /* タイトルを少し大きく */
+      font-size: 2.2rem;
       margin-top: 0;
       margin-bottom: 40px;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+      text-align: left;
     }
 
     img {
-      max-width: 90%; /* 写真も少し大きく */
+      max-width: 100%;
       height: auto;
       margin: 0 0 40px 0;
       display: block;
@@ -42,12 +48,12 @@ layout: default
     }
 
     .poem {
-      font-size: 1.3rem; /* 本文のフォントサイズを上げました */
-      color: #444;
+      font-size: 1.4rem;
+      color: #333;
       margin-top: 0;
       margin-bottom: 80px;
       white-space: pre-wrap;
-      display: block;
+      text-align: left;
     }
 
     .navigation {
@@ -70,6 +76,7 @@ layout: default
       margin-top: 80px;
       font-size: 0.9rem;
       color: #bbb;
+      text-align: left;
     }
   </style>
 </head>
