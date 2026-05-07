@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "初夏"
-image: "/german-iris.jpg"
+image: "german-iris.jpg"
 ---
 
 いつもの歩道
