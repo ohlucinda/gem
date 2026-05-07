@@ -19,10 +19,9 @@ layout: null
     }
 
     .content {
-      /* 500pxの幅を、数学的な中央に配置 */
       width: 500px;
       max-width: calc(100% - 40px);
-      margin: 150px auto 100px auto; /* 天井から150px下げ、左右は自動で中央 */
+      margin: 150px auto 100px auto; 
       display: block;
     }
 
@@ -41,8 +40,7 @@ layout: null
     }
 
     .image-wrapper img {
-      /* 最初に出ていた時の設定に戻し、Safari対策の height:auto だけ追加 */
-      width: 100%;
+      width: 100% !important;
       height: auto !important; 
       display: block;
     }
@@ -62,7 +60,7 @@ layout: null
     <h1>{{ page.title }}</h1>
 
     <div class="image-wrapper">
-      <img src="{{ page.image }}">
+      <img src="{{ page.image | relative_url }}">
     </div>
 
     <div class="poem">
