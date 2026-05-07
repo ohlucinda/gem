@@ -1,9 +1,8 @@
 ---
 layout: post
-title: 初夏
+title: "初夏"
+image: "/assets/images/german-iris.jpg"
 ---
-
-![ジャーマンアイリス]({{ site.baseurl }}/IMG_1681.jpg)
 
 いつもの歩道
 いつもの段差
