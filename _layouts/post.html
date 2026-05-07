@@ -12,73 +12,70 @@ layout: default
 
   <style>
     body {
-      background-color: #ffffff; /* 背景を白に */
-      color: #000000; /* 文字をはっきりした黒に */
-      /* 英数字に Jimbo Std Expanded を適用し、日本語は読みやすいゴシック体に */
+      background-color: #ffffff;
+      color: #000000;
+      /* 英数字は Jimbo、日本語はスッキリしたゴシック体 */
       font-family: "jimbo-std-expanded", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-      line-height: 1.6;
+      line-height: 1.8;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0;
-      padding: 80px 20px;
+      padding: 60px 20px;
     }
     
     .content {
-      max-width: 700px; /* 太いフォントに合わせて少し幅を広げました */
+      max-width: 600px; /* 幅を少し絞って読みやすく */
       width: 100%;
       text-align: left;
     }
 
     h1 {
-      /* タイトルに Jimbo を使い、ドカンと大きく */
       font-family: "jimbo-std-expanded", sans-serif;
       font-weight: 700;
-      font-size: 3rem; 
+      font-size: 1.8rem; /* サイズをぐっと抑えました */
       margin-top: 0;
-      margin-bottom: 50px;
-      line-height: 1.1;
-      text-transform: uppercase; /* 英字なら大文字にするとさらに迫力が出ます */
+      margin-bottom: 30px;
+      letter-spacing: 0.02em;
     }
 
     img {
       max-width: 100%;
       height: auto;
-      margin: 0 0 50px 0;
+      margin: 0 0 30px 0;
       display: block;
     }
 
     .poem {
-      /* 本文も Jimbo で大きく見せます */
-      font-size: 1.6rem;
+      font-size: 1.1rem; /* 標準的な読みやすいサイズに修正 */
       font-weight: 400;
       margin-top: 0;
-      margin-bottom: 100px;
+      margin-bottom: 60px;
       white-space: pre-wrap;
     }
 
     .navigation {
-      margin-top: 60px;
+      margin-top: 40px;
       display: flex;
       justify-content: flex-start;
-      gap: 20px;
+      gap: 15px;
     }
 
     .nav-button {
       font-family: "jimbo-std-expanded", sans-serif;
       text-decoration: none;
       color: #000;
-      border: 2px solid #000; /* ボタンも太めの線で Jimbo に合わせました */
-      padding: 12px 24px;
+      border: 1px solid #000; /* 線も少し細くして上品に */
+      padding: 8px 16px;
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
 
     footer {
-      margin-top: 100px;
-      font-size: 1rem;
+      margin-top: 80px;
+      font-size: 0.8rem;
       font-family: "jimbo-std-expanded", sans-serif;
-      color: #000;
+      color: #666; /* フッターは少し色を抜いて馴染ませました */
     }
   </style>
 </head>
