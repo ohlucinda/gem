@@ -1,109 +1,76 @@
 ---
-layout: default
+layout: null
 ---
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }} | gem</title>
-  
   <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
+  
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <style>
     body {
       margin: 0;
-      /* 天井からの距離をここで確保。120pxほど下げます */
-      padding: 120px 20px; 
-      /* 中身を中央に置くための最も古典的で確実な方法 */
-      text-align: center; 
+      padding: 0;
       background-color: #ffffff;
+      text-align: left; /* 基本は左揃え */
     }
 
     .content {
-      /* 500pxの幅を中央に固定。左右の auto が均等に余白を配分します */
+      /* 500pxの箱を数学的な中央に配置 */
       width: 500px;
-      max-width: 100%;
-      margin: 0 auto;
-      /* 中身（タイトルと画像）の左端をビシッと揃える */
-      display: inline-block; 
-      text-align: left;
+      max-width: calc(100% - 40px);
+      margin: 150px auto 100px auto; /* 上に150pxの余裕、左右は自動で中央 */
+      display: block;
     }
 
     h1 {
       font-family: "jimbo-std-expanded", sans-serif;
       font-size: 2.2rem;
-      margin-top: 0;
-      margin-bottom: 80px;
+      margin: 0 0 80px 0; /* 下にだけ余白 */
+      line-height: 1.2;
       display: block;
     }
 
     .image-wrapper {
       width: 100%;
-      /* Safari対策：aspect-ratio だけに頼らず、高さを自動にする */
-      margin-bottom: 80px;
+      margin: 0 0 80px 0;
+      display: block;
     }
 
     .image-wrapper img {
-      width: 100%;
-      height: auto; /* Safari消失対策：ここをautoに */
+      /* Safariで消えるバグを根絶するための設定 */
+      width: 100% !important;
+      height: auto !important;
       display: block;
     }
 
     .poem {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       line-height: 1.8;
       white-space: pre-wrap;
+      color: #111;
     }
 
-    .navigation {
-      display: flex;
-      gap: 15px;
-      margin-top: 40px;
-    }
-
-    .nav-button {
-      font-family: "jimbo-std-expanded", sans-serif;
-      text-decoration: none;
-      color: #000;
-      border: 1px solid #000;
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
-
-    footer {
-      margin-top: 80px;
-      font-size: 0.8rem;
-      color: #888;
-    }
+    /* 戻るリンクなどがあればここに追加 */
   </style>
 </head>
 <body>
+
   <div class="content">
     <h1>{{ page.title }}</h1>
-    
-    {% if page.image %}
+
     <div class="image-wrapper">
-       <img src="{{ page.image | relative_url }}" alt="">
+      <img src="{{ page.image }}" width="500" height="700">
     </div>
-    {% endif %}
 
     <div class="poem">
-      {{ content }}
+{{ content }}
     </div>
-
-    <div class="navigation">
-      {% if page.previous %}
-        <a href="{{ page.previous.url | relative_url }}" class="nav-button">PREV</a>
-      {% endif %}
-      {% if page.next %}
-        <a href="{{ page.next.url | relative_url }}" class="nav-button">NEXT</a>
-      {% endif %}
-    </div>
-    
-    <footer>
-      © 2026 gem
-    </footer>
   </div>
+
 </body>
 </html>
