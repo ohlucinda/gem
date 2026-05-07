@@ -13,10 +13,10 @@ layout: default
   <style>
     body {
       background-color: #ffffff; /* 背景を白に */
-      color: #333;
-      /* 英数字はプロジェクトのフォント、日本語はゴシック体（明朝体以外）を指定 */
-      font-family: "jimbo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; 
-      line-height: 1.8;
+      color: #000000; /* 文字をはっきりした黒に */
+      /* 英数字に Jimbo Std Expanded を適用し、日本語は読みやすいゴシック体に */
+      font-family: "jimbo-std-expanded", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+      line-height: 1.6;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -25,35 +25,36 @@ layout: default
     }
     
     .content {
-      max-width: 600px;
+      max-width: 700px; /* 太いフォントに合わせて少し幅を広げました */
       width: 100%;
-      text-align: left; /* すべて左揃え */
+      text-align: left;
     }
 
     h1 {
-      font-size: 2.2rem;
+      /* タイトルに Jimbo を使い、ドカンと大きく */
+      font-family: "jimbo-std-expanded", sans-serif;
+      font-weight: 700;
+      font-size: 3rem; 
       margin-top: 0;
-      margin-bottom: 40px;
-      letter-spacing: 0.05em;
-      font-weight: 400;
-      text-align: left;
+      margin-bottom: 50px;
+      line-height: 1.1;
+      text-transform: uppercase; /* 英字なら大文字にするとさらに迫力が出ます */
     }
 
     img {
       max-width: 100%;
       height: auto;
-      margin: 0 0 40px 0;
+      margin: 0 0 50px 0;
       display: block;
-      border-radius: 2px;
     }
 
     .poem {
-      font-size: 1.4rem;
-      color: #333;
+      /* 本文も Jimbo で大きく見せます */
+      font-size: 1.6rem;
+      font-weight: 400;
       margin-top: 0;
-      margin-bottom: 80px;
+      margin-bottom: 100px;
       white-space: pre-wrap;
-      text-align: left;
     }
 
     .navigation {
@@ -64,19 +65,20 @@ layout: default
     }
 
     .nav-button {
+      font-family: "jimbo-std-expanded", sans-serif;
       text-decoration: none;
-      color: #888;
-      border: 1px solid #ddd;
+      color: #000;
+      border: 2px solid #000; /* ボタンも太めの線で Jimbo に合わせました */
       padding: 12px 24px;
-      border-radius: 5px;
+      font-weight: 700;
       font-size: 1rem;
     }
 
     footer {
-      margin-top: 80px;
-      font-size: 0.9rem;
-      color: #bbb;
-      text-align: left;
+      margin-top: 100px;
+      font-size: 1rem;
+      font-family: "jimbo-std-expanded", sans-serif;
+      color: #000;
     }
   </style>
 </head>
@@ -90,15 +92,15 @@ layout: default
 
     <div class="navigation">
       {% if page.previous %}
-        <a href="{{ page.previous.url | relative_url }}" class="nav-button">← Prev</a>
+        <a href="{{ page.previous.url | relative_url }}" class="nav-button">PREV</a>
       {% endif %}
       {% if page.next %}
-        <a href="{{ page.next.url | relative_url }}" class="nav-button">Next →</a>
+        <a href="{{ page.next.url | relative_url }}" class="nav-button">NEXT</a>
       {% endif %}
     </div>
     
     <footer>
-      © 2026 gem
+      © 2026 GEM
     </footer>
   </div>
 </body>
