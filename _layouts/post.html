@@ -28,23 +28,14 @@ layout: default
     /* タイトルの設定 */
     h1 {
       font-size: 1.6rem;
-      margin-bottom: 5px; /* サブタイトルにぐっと近づけます */
+      margin-bottom: 25px; /* タイトルと写真の距離 */
       letter-spacing: 0.12em;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #444;
-      margin-top: 0;
-      margin-bottom: 20px; /* サブタイトルと写真の距離を調整 */
-      letter-spacing: 0.05em;
-    }
-
     img {
-      max-width: 70%; /* 少しサイズを下げて上品にしました */
+      max-width: 70%;
       height: auto;
-      margin: 0 auto 20px; /* 写真とポエムの距離 */
+      margin: 0 auto 25px; /* 写真とポエムの距離 */
       display: block;
       border-radius: 2px;
     }
@@ -54,8 +45,8 @@ layout: default
       margin-top: 0;
       margin-bottom: 50px;
       white-space: pre-wrap;
-      text-align: left; /* 詩の左揃えを維持 */
-      display: inline-block; /* 中央寄せの中での左揃え用 */
+      text-align: left;
+      display: inline-block;
     }
 
     .navigation {
@@ -82,9 +73,6 @@ layout: default
 <body>
   <div class="content">
     <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
-      <div class="subtitle">{{ page.subtitle }}</div>
-    {% endif %}
     
     <div class="poem">
       {{ content }}
