@@ -6,15 +6,13 @@ layout: null
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | gem</title>
+  <title>gem</title>
   <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
-  
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #ffffff;
-      /* スマホで文字が小さくならないようにする魔法のコード */
       -webkit-text-size-adjust: 100%;
     }
     .content {
@@ -22,11 +20,11 @@ layout: null
       padding: 0 20px;
       margin: 60px auto 80px auto; 
       box-sizing: border-box;
-      display: block;
+      text-align: center; /* 中央寄せにします */
     }
     h1 {
       font-family: "jimbo-std-expanded", sans-serif;
-      font-size: 1.8rem; /* スマホで見栄えの良いサイズ */
+      font-size: 2.2rem;
       margin: 0 0 40px 0;
       line-height: 1.2;
     }
@@ -36,32 +34,48 @@ layout: null
     }
     .image-wrapper img {
       width: 100% !important;
+      max-width: 500px; /* あまりに大きくなりすぎないように */
       height: auto !important;
-      display: block;
     }
     .poem {
-      font-size: 1.1rem;
+      font-size: 1.3rem; /* 少し大きくしました */
       line-height: 1.8;
-      white-space: pre-wrap;
       color: #111;
+      margin-bottom: 60px;
+    }
+    .begin-link {
+      font-family: "jimbo-std-expanded", sans-serif;
+      font-size: 1.8rem;
+      color: #111;
+      text-decoration: none;
+      border-bottom: 1px solid #666;
+      padding-bottom: 10px;
     }
     footer {
       font-family: "jimbo-std-expanded", sans-serif;
       font-size: 1rem;
-      margin-top: 80px;
+      margin-top: 100px;
       padding-bottom: 60px;
     }
   </style>
 </head>
 <body>
   <div class="content">
-    <h1>{{ page.title }}</h1>
+    <h1>gem</h1>
+
     <div class="image-wrapper">
-      <img src="{{ site.baseurl }}/{{ page.image }}">
+      <img src="{{ site.baseurl }}/assets/img/top.jpg">
     </div>
+
     <div class="poem">
-{{ content }}
+      写真と、短い言葉。<br>
+      photos and words
     </div>
+
+    <div>
+      <a href="{{ site.baseurl }}/blog" class="begin-link">begin</a>
+    </div>
+
     <footer>
       © 2026 gem
     </footer>
