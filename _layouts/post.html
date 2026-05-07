@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} | gem</title>
+  <title>gem</title>
   <style>
     body {
       background-color: #f0f0f0;
@@ -19,11 +19,6 @@
       max-width: 600px;
       width: 100%;
       text-align: center;
-    }
-    h1 {
-      font-size: 1.5rem;
-      color: #4a4a8a;
-      margin-bottom: 5px;
     }
     .subtitle {
       font-size: 0.9rem;
@@ -62,11 +57,12 @@
 </head>
 <body>
   <div class="content">
-    <h1>{{ page.title }}</h1>
     <div class="subtitle">{{ page.subtitle }}</div>
+    
     <div class="poem">
       {{ content }}
     </div>
+
     <div class="navigation">
       {% if page.previous %}
         <a href="{{ page.previous.url }}" class="nav-button">← Prev</a>
@@ -75,8 +71,9 @@
         <a href="{{ page.next.url }}" class="nav-button">Next →</a>
       {% endif %}
     </div>
+    
     <footer>
-      © {{ site.time | date: "%Y" }} gem
+      © 2026 gem
     </footer>
   </div>
 </body>
