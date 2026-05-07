@@ -4,6 +4,12 @@ layout: null
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <script>
+  if (window.innerWidth <= 700) {
+    // 今いる場所（gem）にある sp.html を直接指定します
+    window.location.href = window.location.pathname.replace('index.html', '') + 'sp.html';
+  }
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gem</title>
