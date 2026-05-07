@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | gem</title>
+  <style>
+    body {
+      background-color: #f0f0f0; /* こだわりの薄いグレー */
+      color: #333;
+      font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 50px 20px;
+    }
+    .content {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: #4a4a8a; /* 「初夏」で使っていたような紫系の色 */
+      margin-bottom: 5px;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+    }
+    .poem {
+      margin-bottom: 50px;
+      white-space: pre-wrap; /* 改行をそのまま表示 */
+    }
+    .navigation {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .nav-button {
+      text-decoration: none;
+      color: #666;
+      border: 1px solid #ccc;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+    footer {
+      font-size: 0.8rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>{{ page.title }}</h1>
+    <div class="subtitle">{{ page.subtitle }}</div>
+
+    {{ content }}
+
+    <div class="navigation">
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="nav-button">← Prev</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url }}" class="nav-button">Next →</a>
+      {% endif %}
+    </div>
+
+    <footer>
+      © {{ site.time | date: "%Y" }} gem
+    </footer>
+  </div>
+
+</body>
+</html>
