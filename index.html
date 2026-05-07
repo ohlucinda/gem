@@ -39,33 +39,28 @@ p {
   letter-spacing: 0.08em;
   margin-bottom: 72px;
 }
-
+ 
 .walk-link {
-  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.15rem;
   letter-spacing: 0.08em;
+  padding-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
-  .walk-link {
-    position: relative;
-    display: inline-block;
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-    padding-bottom: 10px;
-    transition: color 0.3s ease;
-  }
-
-  .walk-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--line);
-    transition: background 0.3s ease;
-  }
+.walk-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #999;
+  transition: background 0.3s ease;
+}
 
   .walk-link:hover {
     color: #555;
