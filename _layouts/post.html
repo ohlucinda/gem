@@ -21,23 +21,26 @@
       text-align: center;
     }
     .subtitle {
-      font-size: 1.2rem;       /* 少し大きくしました */
-      font-weight: bold;      /* 太字にしました */
-      color: #444;            /* 色を少し濃くしてハッキリさせました */
-      margin-bottom: 40px;    /* 写真との間隔を少し広げました */
-      letter-spacing: 0.05em; /* 文字の間隔をわずかに広げて読みやすくしました */
-    }
-    img {
-      max-width: 80%;      /* 横幅を100%から80%に下げました */
-      height: auto;
-      margin: 0 auto 30px; /* 真ん中に寄せて、下に余白を作りました */
-      display: block;      /* 左右中央に配置するために必要です */
-      border-radius: 2px;  /* ほんの少し角を丸くすると、柔らかい印象になります */
-    }
-    .poem {
-      margin-bottom: 50px;
-      white-space: pre-wrap;
-    }
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 20px;    /* ここを 40px から 20px に減らして写真を近づけます */
+  letter-spacing: 0.05em;
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 20px;    /* 下側の余白も 30px から 20px に減らして本文を近づけます */
+  display: block;
+  border-radius: 2px;
+}
+
+.poem {
+  margin-top: 0;          /* 本文の上の余白をゼロにします */
+  margin-bottom: 50px;
+  white-space: pre-wrap;
+}
     .navigation {
       margin-top: 50px;
       margin-bottom: 50px;
