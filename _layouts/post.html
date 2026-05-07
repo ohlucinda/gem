@@ -24,40 +24,38 @@ layout: default
       padding: 120px 20px; 
     }
     
+    /* 全体を包む箱：ここで「左端」の基準を決めます */
     .content {
-      max-width: 500px; /* 少しスリムにして縦長写真を際立たせます */
+      max-width: 500px;    /* 画像の幅と合わせます */
       width: 100%;
-      text-align: left;
+      margin-left: auto;   /* 画面全体の中央に配置したい場合 */
+      margin-right: auto; 
+      text-align: left;    /* 中身はすべて左に寄せる */
     }
 
     h1 {
       font-family: "jimbo-std-expanded", sans-serif;
       font-weight: 700;
-      font-size: 1.6rem;
+      font-size: 2.2rem;
       margin-top: 0;
-      margin-bottom: 80px;
+      margin-bottom: 80px; 
+      text-align: left;    /* タイトルを左に */
     }
 
-    /* 写真のサイズと比率を厳密に固定 */
+    /* 画像の枠 */
     .image-wrapper {
-      width: 100%;
+      width: 100%;         /* .contentの幅（500px）いっぱいになります */
       aspect-ratio: 5 / 7;
-      margin-bottom: 40px;
+      margin-left: 0;      /* 左端にピタッと合わせる */
+      margin-right: 0;
+      margin-bottom: 80px; 
       overflow: hidden;
-      display: block;
-    }
-
-    .image-wrapper img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: cover;
       display: block;
     }
 
     .poem {
       font-size: 1.1rem;
-      margin-top: 0;
-      margin-bottom: 60px;
+      text-align: left;    /* 本文も左に */
       white-space: pre-wrap;
     }
 
