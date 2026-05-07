@@ -12,55 +12,52 @@ layout: default
 
   <style>
     body {
-      background-color: #ffffff;
-      color: #000000;
-      font-family: "jimbo-std-expanded", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
-      line-height: 1.8;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin: 0;
-      /* 最初の 40px を 120px に変更して、全体を下に下げます */
-      padding: 120px 20px; 
+      align-items: center; /* これが「数学的な中央」を決定します */
+      min-height: 100vh;
     }
-    
-    /* 全体を包む箱：ここで「左端」の基準を決めます */
-    /* 1. 全体を包むコンテナを中央に固定する */
-    /* 1. まず、土台を画面の中央に配置する */
+
     .content {
-      max-width: 500px; /* 画像の最大幅 */
-      width: 100%;      
-      margin: 0 auto;   /* これで箱自体が画面の真ん中に固定されます */
-      padding: 0 20px;  /* 画面端にピッタリくっつくのを防ぐ予白 */
-      box-sizing: border-box;
-      text-align: left; /* 中身は基本左揃え */
+      /* ここで「写真と同じ幅」を厳格に指定します */
+      width: 500px; 
+      max-width: 90vw; /* 画面が狭い時も中央を保つためのクッション */
+      
+      /* 左右の余白をブラウザに自動計算させ、完全に均等にします */
+      margin-left: auto;
+      margin-right: auto;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* 塊の中では左に揃える */
     }
 
-    /* 2. 画像の枠（土台の幅いっぱいに広がる） */
     .image-wrapper {
-      width: 100%;      /* .contentの幅（最大500px）に合わせる */
+      width: 100%; /* .contentの500pxを100%使う */
       aspect-ratio: 5 / 7;
+      margin-top: 120px;
       margin-bottom: 80px;
-      overflow: hidden;
       display: block;
-      position: relative;
     }
 
-    /* 3. 画像：ドアップを防ぎ、枠の左上にピタッと合わせる */
     .image-wrapper img {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: contain;  /* 画像を潰さず、枠内に収める */
-      object-position: left top; /* 枠の左上に基準を置く */
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       display: block;
     }
 
     /* 4. タイトル（画像の左端と揃う） */
     h1 {
-      font-family: "jimbo-std-expanded", sans-serif;
-      font-size: 2.2rem;
-      margin-bottom: 80px;
-      text-align: left; 
+      font-family: "jimbo-std-expanded", sans-serif; /* 書体：これは絶対必要 */
+      font-size: 2.2rem;                            /* サイズ：これも必要 */
+      margin-top: 0;                                 /* 上の余白をリセット */
+      margin-bottom: 80px;                          /* 画像との距離：重要 */
+      
+      /* text-align: left; は、親要素の .content が 
+         align-items: flex-start; になっていれば、書かなくても自動で左に揃います */
     }
     .poem {
       font-size: 1.1rem;
