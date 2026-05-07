@@ -16,35 +16,33 @@ layout: null
       margin: 0;
       padding: 0;
       background-color: #ffffff;
-      text-align: left; /* 基本は左揃え */
     }
 
     .content {
-      /* 500pxの箱を数学的な中央に配置 */
+      /* 500pxの幅を中央に固定 */
       width: 500px;
       max-width: calc(100% - 40px);
-      margin: 150px auto 100px auto; /* 上に150pxの余裕、左右は自動で中央 */
+      margin: 150px auto 100px auto; /* 天井から150px、左右中央 */
       display: block;
     }
 
     h1 {
       font-family: "jimbo-std-expanded", sans-serif;
       font-size: 2.2rem;
-      margin: 0 0 80px 0; /* 下にだけ余白 */
+      margin: 0 0 80px 0;
       line-height: 1.2;
-      display: block;
+      text-align: left;
     }
 
     .image-wrapper {
       width: 100%;
       margin: 0 0 80px 0;
-      display: block;
+      /* ここで高さを固定せず、中身の画像に任せます */
     }
 
     .image-wrapper img {
-      /* Safariで消えるバグを根絶するための設定 */
       width: 100% !important;
-      height: auto !important;
+      height: auto !important; /* これがSafariとChrome共通の復活の鍵です */
       display: block;
     }
 
@@ -53,9 +51,8 @@ layout: null
       line-height: 1.8;
       white-space: pre-wrap;
       color: #111;
+      text-align: left;
     }
-
-    /* 戻るリンクなどがあればここに追加 */
   </style>
 </head>
 <body>
@@ -64,7 +61,7 @@ layout: null
     <h1>{{ page.title }}</h1>
 
     <div class="image-wrapper">
-      <img src="{{ page.image }}" width="500" height="700">
+      <img src="{{ page.image }}">
     </div>
 
     <div class="poem">
