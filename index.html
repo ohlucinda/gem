@@ -147,11 +147,21 @@ layout: null
      photos and words</p>
 
   <div>
-    {% for post in site.posts limit:1 %}
-      <a href="{{ post.url | relative_url }}" class="walk-link">
-        begin
-      </a>
+    <a href="#" class="walk-link" id="random-post-link">
+  begin
+</a>
+
+<script>
+  const posts = [
+    {% for post in site.posts %}
+      "{{ post.url | relative_url }}",
     {% endfor %}
+  ];
+
+  const randomPost = posts[Math.floor(Math.random() * posts.length)];
+
+  document.getElementById("random-post-link").href = randomPost;
+</script>
   </div>
 
   <footer>
