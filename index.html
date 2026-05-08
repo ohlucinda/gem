@@ -113,14 +113,13 @@ layout: null
   }
   
  @media (max-width: 768px) {
-  /* トップページ：あの「大きくなった！」時のゆったりした余白 */
-  .intro {
-    padding-top: 200px !important;
+  /* 上の突き抜けを防ぎつつ、下げすぎない絶妙な位置に固定します */
+  .intro, header.header {
+    padding-top: 80px !important; 
   }
 
-  /* 記事ページ：位置を「いじる前」の納得のバランスへ */
-  header.header {
-    padding-top: 150px !important;
+  h1 {
+    margin-top: 10px !important;
   }
 }
 </style>
