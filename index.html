@@ -177,7 +177,13 @@ font-family: "jimbo-std-expanded", sans-serif;
 letter-spacing: 0.2px;
 
 }
-  
+
+.mobile-copy {
+
+display: none;
+
+}
+
 footer {
 
 margin-top: 220px;
@@ -203,7 +209,7 @@ margin-top: 90px;
 }
 
 }
-  
+
 @media (max-width: 768px) {
 
 footer {
@@ -224,7 +230,20 @@ font-size: 42px;
 
 }
 
+.mobile-copy {
+
+display: block;
+
+margin-top: 28px;
+
+font-size: 0.65rem;
+
+color: #777;
+
 }
+
+}
+
 </style>
 
 </head>
@@ -264,7 +283,7 @@ Pages appear randomly
 © 2024 ohlucinda
 
 </p>
-  
+
 </div>
 
 <script>
@@ -284,7 +303,15 @@ const randomPost = posts[Math.floor(Math.random() * posts.length)];
 document.getElementById("random-post-link").href = randomPost;
 
 </script>
-  
+
+<footer>
+
+© 2024 ohlucinda
+
+</footer>
+
+</div>
+
 </body>
 
 </html>
