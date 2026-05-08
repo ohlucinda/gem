@@ -85,6 +85,26 @@ layout: null
     <a href="{{ site.baseurl }}/" class="back-link">
   back to home
 </a>
+
+    <a href="#" class="next-link" id="random-next-link">
+  next
+</a>
+
+<script>
+  const posts = [
+    {% for post in site.posts %}
+      "{{ post.url | relative_url }}",
+    {% endfor %}
+  ];
+
+  const current = window.location.pathname;
+
+  const filtered = posts.filter(post => post !== current);
+
+  const randomNext = filtered[Math.floor(Math.random() * filtered.length)];
+
+  document.getElementById("random-next-link").href = randomNext;
+</script>
     
     <footer>
       © 2026 gem
