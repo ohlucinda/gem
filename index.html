@@ -111,36 +111,7 @@ layout: null
     font-family: "jimbo-std-expanded", sans-serif;
     font-weight: 400;
   }
-
-  /* --- index.html の media 部分を上書きしてください --- */
-
-  @media (max-width: 768px) {
-    /* 1. 外側の箱の「高さ」と「余白」をリセット */
-    .intro {
-      min-height: auto !important; /* 高さを固定せず、中身に合わせる */
-      padding-top: 20px !important; /* 画面上端からの距離（お好みで0にしてもOK） */
-      display: block !important;    /* 中央寄せの命令を解除 */
-    }
-
-    /* 2. タイトルの位置を上に張り付かせる */
-    h1 {
-      font-size: 2.0rem !important;
-      margin-top: 0 !important;      /* 上の隙間を完全にゼロ */
-      margin-bottom: 10px !important; /* 写真との距離を最小限に */
-      line-height: 1.2 !important;
-    }
-
-    /* 3. タイトル下の説明文（もしあれば）の隙間も削る */
-    p {
-      margin-top: 0 !important;
-      margin-bottom: 30px !important; /* ここを小さくすると写真が上がってきます */
-    }
-
-    /* 4. 写真自体の上の余白もチェック */
-    .image-wrapper, img {
-      margin-top: 0 !important;
-    }
-  }
+ 
 </style>
 
 <div class="intro">
