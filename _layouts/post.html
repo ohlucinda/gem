@@ -99,33 +99,39 @@ layout: null
 
     <div class="nav-links">
 
-      <a href="#" class="next-link" id="random-next-link">
-        next
-      </a>
+  <a href="#" class="next-link" id="random-next-link">
+    next
+  </a>
 
-      <span>/</span>
+  <span>/</span>
 
-      <a href="{{ site.baseurl }}/" class="back-link">
-        back to home
-      </a>
+  <a href="javascript:history.back()" class="back-link">
+    back
+  </a>
 
-    </div>
+  <span>/</span>
 
-    <script>
-      const posts = [
-        {% for post in site.posts %}
-          "{{ post.url | relative_url }}",
-        {% endfor %}
-      ];
+  <a href="{{ site.baseurl }}/" class="back-link">
+    home
+  </a>
 
-      const current = window.location.pathname;
+</div>
 
-      const filtered = posts.filter(post => post !== current);
+<script>
+  const posts = [
+    {% for post in site.posts %}
+      "{{ post.url | relative_url }}",
+    {% endfor %}
+  ];
 
-      const randomNext = filtered[Math.floor(Math.random() * filtered.length)];
+  const current = window.location.pathname;
 
-      document.getElementById("random-next-link").href = randomNext;
-    </script>
+  const filtered = posts.filter(post => post !== current);
+
+  const randomNext = filtered[Math.floor(Math.random() * filtered.length)];
+
+  document.getElementById("random-next-link").href = randomNext;
+</script>
 
     <footer>
       © 2026 gem
