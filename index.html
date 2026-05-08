@@ -115,32 +115,30 @@ layout: null
   /* --- index.html の media 部分を上書きしてください --- */
 
   @media (max-width: 768px) {
-    /* 1. ページ全体の上の余白を詰める */
+    /* 1. 外側の箱の「高さ」と「余白」をリセット */
     .intro {
-      padding: 0px 24px;   /* 60pxから0pxへ。画面上部へ近づけます */
+      min-height: auto !important; /* 高さを固定せず、中身に合わせる */
+      padding-top: 20px !important; /* 画面上端からの距離（お好みで0にしてもOK） */
+      display: block !important;    /* 中央寄せの命令を解除 */
     }
 
-    /* 2. タイトルの大きさと位置を調整 */
+    /* 2. タイトルの位置を上に張り付かせる */
     h1 {
-      font-size: 2.2rem;   /* 3.8remだと大きすぎるので、シュッとさせます */
-      margin-top: 0;       /* もし上に隙間があるなら0に */
-      margin-bottom: 20px; /* 90pxから20pxへ。タイトルと写真を近づけます */
-      text-align: center;  /* もし右のように真ん中に寄せたければ追加 */
+      font-size: 2.0rem !important;
+      margin-top: 0 !important;      /* 上の隙間を完全にゼロ */
+      margin-bottom: 10px !important; /* 写真との距離を最小限に */
+      line-height: 1.2 !important;
     }
 
-    /* 3. タイトル下の要素の位置を調整 */
+    /* 3. タイトル下の説明文（もしあれば）の隙間も削る */
     p {
-      margin-bottom: 40px; /* 90pxから40pxへ。間延びをなくします */
+      margin-top: 0 !important;
+      margin-bottom: 30px !important; /* ここを小さくすると写真が上がってきます */
     }
 
-    /* 以下は元の設定のままでOK */
-    .walk-link {
-      font-size: 1.4rem;
-    }
-
-    footer {
-      margin-top: 100px;   /* フッターも少し上に引き上げる */
-      font-size: 0.95rem;
+    /* 4. 写真自体の上の余白もチェック */
+    .image-wrapper, img {
+      margin-top: 0 !important;
     }
   }
 </style>
