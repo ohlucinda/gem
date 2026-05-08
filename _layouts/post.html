@@ -7,125 +7,130 @@ layout: null
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }} | gem</title>
-  
+
   <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
   <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
 
   <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
-  
+
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #ffffff;
     }
+
     .content {
       width: 500px;
       max-width: calc(100% - 40px);
-      margin: 120px auto 100px auto; 
+      margin: 120px auto 100px auto;
       display: block;
     }
+
     h1 {
       font-family: "jimbo-std-expanded", sans-serif;
       font-size: 2.2rem;
       margin: 0 0 80px 0;
       line-height: 1.2;
     }
+
     .image-wrapper {
       width: 100%;
       margin: -20px 0 100px 0;
     }
+
     .image-wrapper img {
       width: 100% !important;
       height: auto !important;
       display: block;
     }
+
     .poem {
       font-size: 1.15rem;
       line-height: 1.8;
       white-space: pre-wrap;
       color: #111;
     }
-    footer {
-  font-family: "jimbo-std-expanded", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  margin-top: 100px;
-  padding-bottom: 80px;
-  opacity: 0.6;
-}
+
+    .next-link,
     .back-link {
-  display: inline-block;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #666;
-  font-family: "jimbo-std-expanded", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
+      text-decoration: none;
+      color: #666;
+      font-family: "jimbo-std-expanded", sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
 
-.back-link:hover {
-  color: #999;
-  transform: translateY(3px);
-}
+    .next-link:hover,
+    .back-link:hover {
+      color: #999;
+      transform: translateY(3px);
+    }
 
-    .next-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #666;
-  font-family: "jimbo-std-expanded", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
+    .nav-links {
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
 
-.next-link:hover {
-  color: #999;
-  transform: translateY(3px);
-}
-    
+    footer {
+      font-family: "jimbo-std-expanded", sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      margin-top: 100px;
+      padding-bottom: 80px;
+      opacity: 0.6;
+    }
   </style>
 </head>
+
 <body>
   <div class="content">
+
     <h1>{{ page.title }}</h1>
+
     <div class="image-wrapper">
       <img src="{{ site.baseurl }}/{{ page.image }}">
     </div>
+
     <div class="poem">
 {{ content }}
     </div>
 
-    <a href="{{ site.baseurl }}/" class="back-link">
-  back to home
-</a>
+    <div class="nav-links">
 
-    <a href="#" class="next-link" id="random-next-link">
-  next
-</a>
+      <a href="#" class="next-link" id="random-next-link">
+        next
+      </a>
 
-<script>
-  const posts = [
-    {% for post in site.posts %}
-      "{{ post.url | relative_url }}",
-    {% endfor %}
-  ];
+      <span>/</span>
 
-  const current = window.location.pathname;
+      <a href="{{ site.baseurl }}/" class="back-link">
+        back to home
+      </a>
 
-  const filtered = posts.filter(post => post !== current);
+    </div>
 
-  const randomNext = filtered[Math.floor(Math.random() * filtered.length)];
+    <script>
+      const posts = [
+        {% for post in site.posts %}
+          "{{ post.url | relative_url }}",
+        {% endfor %}
+      ];
 
-  document.getElementById("random-next-link").href = randomNext;
-</script>
-    
+      const current = window.location.pathname;
+
+      const filtered = posts.filter(post => post !== current);
+
+      const randomNext = filtered[Math.floor(Math.random() * filtered.length)];
+
+      document.getElementById("random-next-link").href = randomNext;
+    </script>
+
     <footer>
       © 2026 gem
     </footer>
+
   </div>
 </body>
 </html>
