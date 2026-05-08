@@ -3,163 +3,269 @@ layout: null
 ---
 
 <!DOCTYPE html>
+
 <html lang="ja">
+
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>gem | photos and words</title>
-  
-  <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
+<meta charset="UTF-8">
 
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-　<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>gem | photos and words</title>
+
+<link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <style>
-  :root {
-    --accent: #111;
-    --text: #111;
-    --line: #666;
-    --line-hover: #111;
-    --bg: #ffffff;
-  }
 
-  * {
-    box-sizing: border-box;
-  }
+:root {
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "jimbo-std-expanded", sans-serif;
-    font-weight: 400;
-  }
+--accent: #111;
 
-  .intro {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 80px 32px;
+--text: #111;
 
-    transform: translateY(-5px);
-  }
+--line: #666;
 
-  h1 {
-  font-family: "jimbo-std-expanded", sans-serif;
-  font-size: 90px;
-  line-height: 1;
-  margin: 0 0 40px 0;
-  text-align: center;
+--line-hover: #111;
+
+--bg: #ffffff;
+
 }
 
-  p {
-    margin: 0 0 120px;
-    color: var(--text);
-    font-size: 1.5rem;
-    letter-spacing: 0;
-    line-height: 1.8;
-    font-family: "jimbo-std-expanded", sans-serif;
-  }
+* {
 
-  .walk-link {
-  position: relative;
-  display: inline-block;
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 38px;
-  letter-spacing: 0;
-  padding-bottom: 14px;
-  transition: all 0.3s ease;
-  font-family: "jimbo-std-expanded", sans-serif;
-  font-weight: 400;
+box-sizing: border-box;
+
+}
+
+body {
+
+margin: 0;
+
+background: var(--bg);
+
+color: var(--text);
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-weight: 400;
+
+}
+
+.intro {
+
+min-height: 100vh;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+text-align: center;
+
+padding: 80px 32px;
+
+transform: translateY(-5px);
+
+}
+
+h1 {
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-size: 90px;
+
+line-height: 1;
+
+margin: 0 0 40px 0;
+
+text-align: center;
+
+}
+
+p {
+
+margin: 0 0 120px;
+
+color: var(--text);
+
+font-size: 1.5rem;
+
+letter-spacing: 0;
+
+line-height: 1.8;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+}
+
+.walk-link {
+
+position: relative;
+
+display: inline-block;
+
+color: var(--accent);
+
+text-decoration: none;
+
+font-size: 38px;
+
+letter-spacing: 0;
+
+padding-bottom: 14px;
+
+transition: all 0.3s ease;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-weight: 400;
+
 }
 
 .walk-link:hover {
-  color: #444;
-  transform: translateY(3px);
+
+color: #888;
+
 }
 
 .walk-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--line);
-  transition: background 0.3s ease;
+
+content: "";
+
+position: absolute;
+
+left: 0;
+
+bottom: 0;
+
+width: 100%;
+
+height: 1px;
+
+background: var(--line);
+
+transition: background 0.3s ease;
+
 }
 
 .walk-link:hover::after {
-  background: var(--line-hover);
+
+background: var(--line-hover);
+
 }
 
-  .walk-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: var(--line);
-    transition: background 0.3s ease;
-  }
+.random-note {
 
-  .walk-link:hover {
-    color: #888;
-  }
+margin-top: 18px;
 
-  .walk-link:hover::after {
-    background: var(--line-hover);
-  }
+font-size: 12px;
 
-  footer {
-    margin-top: 220px;
-    font-size: 1.1rem;
-    color: var(--text);
-    letter-spacing: 0;
-    font-family: "jimbo-std-expanded", sans-serif;
-    font-weight: 400;
-  }
-   @media (max-width: 768px) {
+line-height: 1.8;
 
-   footer {
-   margin-top: 80px;
- }
+color: #777;
 
- }
+font-family: "jimbo-std-expanded", sans-serif;
+
+letter-spacing: 0.3px;
+
+}
+
+footer {
+
+margin-top: 220px;
+
+font-size: 1.1rem;
+
+color: var(--text);
+
+letter-spacing: 0;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-weight: 400;
+
+}
+
+@media (max-width: 768px) {
+
+footer {
+
+margin-top: 80px;
+
+}
+
+}
+
 </style>
 
+</head>
+
+<body>
+
 <div class="intro">
-  <h1>gem</h1>
 
-  <p>写真と言葉<br>
-     photos and words</p>
+<h1>gem</h1>
 
-  <div>
-    <a href="#" class="walk-link" id="random-post-link">
-  begin
+<p>
+
+写真と言葉<br>
+
+photos and words
+
+</p>
+
+<div>
+
+<a href="#" class="walk-link" id="random-post-link">
+
+begin
+
 </a>
 
-<script>
-  const posts = [
-    {% for post in site.posts %}
-      "{{ post.url | relative_url }}",
-    {% endfor %}
-  ];
+<p class="random-note">
 
-  const randomPost = posts[Math.floor(Math.random() * posts.length)];
+ランダムに表示されます<br>
 
-  document.getElementById("random-post-link").href = randomPost;
-</script>
-  </div>
+Pages appear randomly
 
-  <footer>
-    © 2024 ohlucinda
-  </footer>
+</p>
+
 </div>
+
+<script>
+
+const posts = [
+
+{% for post in site.posts %}
+
+"{{ post.url | relative_url }}",
+
+{% endfor %}
+
+];
+
+const randomPost = posts[Math.floor(Math.random() * posts.length)];
+
+document.getElementById("random-post-link").href = randomPost;
+
+</script>
+
+<footer>
+
+© 2026 ohlucinda
+
+</footer>
+
+</div>
+
+</body>
+
+</html>
