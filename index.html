@@ -113,12 +113,9 @@ layout: null
   }
   
  @media (max-width: 768px) {
-  /* 上の突き抜けを防ぎつつ、下げすぎない絶妙な位置に固定します */
-  .intro, header.header {
-    padding-top: 80px !important; 
-  }
-
-  h1 {
+  /* これが一番最初の、文字が小さかった時の設定です */
+  header.header h1 {
+    font-size: 2rem !important;
     margin-top: 10px !important;
   }
 }
