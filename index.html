@@ -70,17 +70,37 @@ layout: null
   }
 
   .walk-link {
-    position: relative;
-    display: inline-block;
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 38px;
-    letter-spacing: 0;
-    padding-bottom: 14px;
-    transition: color 0.3s ease;
-    font-family: "jimbo-std-expanded", sans-serif;
-    font-weight: 400;
-  }
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 38px;
+  letter-spacing: 0;
+  padding-bottom: 14px;
+  transition: all 0.3s ease;
+  font-family: "jimbo-std-expanded", sans-serif;
+  font-weight: 400;
+}
+
+.walk-link:hover {
+  color: #444;
+  transform: translateY(3px);
+}
+
+.walk-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--line);
+  transition: background 0.3s ease;
+}
+
+.walk-link:hover::after {
+  background: var(--line-hover);
+}
 
   .walk-link::after {
     content: "";
