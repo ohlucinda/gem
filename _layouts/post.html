@@ -3,16 +3,19 @@ layout: null
 ---
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>{{ page.title }} | Gem</title>
 
   <meta property="og:title" content="{{ page.title }}">
   
   <meta property="og:description" content="{{ page.description }}">
   
-  <meta property="og:image" content="https://ohlucinda.github.io/gem/{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/{{ page.image }}">
   
   <meta property="og:type" content="article">
   
