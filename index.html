@@ -307,7 +307,7 @@ const posts = [
 
 {% for post in site.posts %}
 
-"{{ post.url }}",
+"{{ post.url | relative_url }}",
 
 {% endfor %}
 
