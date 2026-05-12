@@ -1,173 +1,344 @@
 ---
 layout: null
 ---
+
 <!DOCTYPE html>
+
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>{{ page.title }} | Gem</title>
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ page.description }}">
-  <meta name="twitter:image" content="https://gemdtp.ohlucinda.com/{{ page.image }}">
+<meta charset="UTF-8">
 
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:site_name" content="Gem">
-  <meta property="og:description" content="{{ page.description }}">
-  <meta property="og:image" content="https://gemdtp.ohlucinda.com/{{ page.image }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ohlucinda.github.io{{ page.url }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="{{ page.description }}">
+<title>Gem | Photos & Words</title>
 
-  <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico">
-  
-  <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
+<meta property="og:title" content="Gem">
+<meta property="og:description" content="Random Photos & Words">
 
-  <link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
+<meta name="description" content="Random Photos and Words">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-    }
+<meta property="og:image" content="https://gem.ohlucinda.com/gem-og.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gem.ohlucinda.com/">
 
-    .content {
-      width: 500px;
-      max-width: calc(100% - 40px);
-      margin: 20px auto 100px auto;
-      display: block;
-    }
+<link rel="stylesheet" href="https://use.typekit.net/qsa5fag.css">
 
-    h1 {
-      font-family: "jimbo-std-expanded", sans-serif;
-      font-size: 2.2rem;
-      margin: 0 0 80px 0;
-      line-height: 1.2;
-    }
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 
-    .image-wrapper {
-      width: 100%;
-      margin: -20px 0 100px 0;
-    }
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    .image-wrapper img {
-      width: 100% !important;
-      height: auto !important;
-      display: block;
-    }
+<style>
 
-    .poem {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      white-space: pre-wrap;
-      color: #111;
-    }
+:root {
 
-    .next-link,
-    .back-link {
-      text-decoration: none;
-      color: #666;
-      font-family: "jimbo-std-expanded", sans-serif;
-      font-size: 16px;
-      letter-spacing: 0.5px;
-      transition: all 0.3s ease;
-    }
+--accent: #111;
 
-    .next-link:hover,
-    .back-link:hover {
-      color: #999;
-      transform: translateY(3px);
-    }
+--text: #111;
 
-    .nav-links {
-      margin-top: 40px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
+--line: #666;
 
-    footer {
-      font-family: "jimbo-std-expanded", sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-      margin-top: 70px;
-      padding-bottom: 0;
-      text-align: center;
-      opacity: 0.6;
-    }
+--line-hover: #111;
 
-    @media (min-width: 768px) {
+--bg: #ffffff;
 
-      body {
-        display: none;
-      }
+}
 
-    }
-  </style>
+* {
+
+box-sizing: border-box;
+
+}
+
+body {
+
+margin: 0;
+
+background: var(--bg);
+
+color: var(--text);
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-weight: 400;
+
+}
+
+.intro {
+
+min-height: 100vh;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+text-align: center;
+
+padding: 80px 32px;
+
+}
+
+h1 {
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-size: 90px;
+
+line-height: 1;
+
+margin: 0 0 40px 0;
+
+text-align: center;
+
+}
+
+p {
+
+margin: 0 0 120px;
+
+color: var(--text);
+
+font-size: 1.5rem;
+
+letter-spacing: 0;
+
+line-height: 1.8;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+}
+
+.walk-link {
+
+position: relative;
+
+display: inline-block;
+
+color: var(--accent);
+
+text-decoration: none;
+
+font-size: 50px;
+
+letter-spacing: 0;
+
+padding-bottom: 14px;
+
+transition: all 0.3s ease;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-weight: 400;
+
+}
+
+.walk-link:hover {
+
+color: #888;
+
+transform: translateY(3px);
+
+}
+
+.walk-link::after {
+
+content: "";
+
+position: absolute;
+
+left: 0;
+
+bottom: 0;
+
+width: 100%;
+
+height: 1px;
+
+background: var(--line);
+
+transition: background 0.3s ease;
+
+}
+
+.walk-link:hover::after {
+
+background: var(--line-hover);
+
+}
+
+.random-note {
+
+margin-top: 13px;
+
+font-size: 13px;
+
+line-height: 1.7;
+
+color: #777;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+letter-spacing: 0.2px;
+
+}
+
+.mobile-copy {
+
+display: none;
+
+}
+
+footer {
+
+margin-top: 220px;
+
+font-size: 18px;
+
+color: var(--text);
+
+letter-spacing: 0;
+
+font-family: "jimbo-std-expanded", sans-serif;
+
+font-weight: 400;
+
+}
+
+@media (min-width: 700px) {
+
+footer {
+
+margin-top: 90px;
+
+}
+
+}
+
+@media (max-width: 699px) {
+
+footer {
+
+display: none;
+
+}
+
+h1 {
+
+font-size: 72px;
+
+}
+
+.walk-link {
+
+font-size: 42px;
+
+}
+
+.mobile-copy {
+
+display: block;
+
+margin-top: -18px;
+
+font-size: 16px;
+
+color: #777;
+
+}
+
+.random-note {
+
+font-size: 13px;
+
+line-height: 1.1;
+
+}
+
+}
+
+@media (min-width: 768px) {
+
+body {
+
+display: none;
+
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <div class="content">
+<div class="intro">
 
-    <h1>{{ page.title }}</h1>
+<h1>gem</h1>
 
-    <div class="image-wrapper">
-      <img src="https://gemdtp.ohlucinda.com/{{ page.image }}">
-    </div>
+<p>
 
-    <div class="poem">
-{{ content }}
-    </div>
+写真と言葉<br>
 
-    <div class="nav-links">
+photos and words
 
-      <a href="javascript:history.back()" class="back-link">
-        back
-      </a>
+</p>
 
-      <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+<div>
 
-      <a href="{{ site.baseurl }}/" class="back-link">
-        home
-      </a>
+<a href="#" class="walk-link" id="random-post-link">
 
-      <span>&nbsp;&nbsp;/&nbsp;&nbsp;</span>
+begin
 
-      <a href="#" class="next-link" id="random-next-link">
-        next
-      </a>
+</a>
 
-    </div>
+<p class="random-note">
 
-    <script>
-      const posts = [
-        {% for post in site.posts %}
-          "{{ post.url | relative_url }}",
-        {% endfor %}
-      ];
+ランダムに表示されます<br>
 
-      const current = window.location.pathname;
+Pages appear randomly
 
-      const filtered = posts.filter(post => post !== current);
+</p>
 
-      const randomNext = filtered[Math.floor(Math.random() * filtered.length)];
+<p class="mobile-copy">
 
-      document.getElementById("random-next-link").href = randomNext;
-    </script>
+© 2024 ohlucinda
 
-    <footer>
-      © 2024 ohlucinda
-    </footer>
+</p>
 
-  </div>
+</div>
+
+<script>
+
+const posts = [
+
+{% for post in site.posts %}
+
+"{{ post.url | relative_url }}",
+
+{% endfor %}
+
+];
+
+const randomPost = posts[Math.floor(Math.random() * posts.length)];
+
+document.getElementById("random-post-link").href = randomPost;
+
+</script>
+
+<footer>
+
+© 2024 ohlucinda
+
+</footer>
+
+</div>
 
 </body>
+
 </html>
