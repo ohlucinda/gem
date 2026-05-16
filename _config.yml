@@ -4,3 +4,6 @@ title: " "
 
 url: https://gem.ohlucinda.com
 baseurl: ""
+
+plugins:
+  - jekyll-sitemap
