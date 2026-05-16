@@ -2,8 +2,9 @@ theme: null
 remote_theme: null
 title: " "
 
-url: https://gem.ohlucinda.com
+url: https://gemdtp.ohlucinda.com
 baseurl: ""
 
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
