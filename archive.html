@@ -1,7 +1,7 @@
 ---
 layout: null
-title: DEV
-permalink: /dev/
+title: archive
+permalink: /archive/
 ---
 
 <!DOCTYPE html>
@@ -36,24 +36,13 @@ margin-bottom: 50px;
 
 .post-list {
 
-display: flex;
-flex-direction: column;
-gap: 26px;
+display: grid;
 
-}
+grid-template-columns: repeat(2, 1fr);
 
-.post-list a {
+gap: 24px 30px;
 
-font-size: 24px;
-text-decoration: none;
-color: #111;
-line-height: 1.5;
-
-}
-
-.post-list a:hover {
-
-opacity: 0.5;
+text-align: center;
 
 }
 
@@ -63,7 +52,7 @@ opacity: 0.5;
 
 <body>
 
-<h1>DEV</h1>
+<h1>ahrchive</h1>
 
 <div class="post-list">
 
@@ -73,7 +62,7 @@ opacity: 0.5;
 {{ post.title }}
 </a>
 
-{% endfor %}
+{% endfor %}  
 
 </div>
 
