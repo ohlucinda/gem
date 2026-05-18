@@ -19,9 +19,87 @@ permalink: /archive/
 
 <style>
 
+body {
+
+  margin: 40px 24px;
+
+  background: #fff;
+
+  font-family: "jimbo-std-expanded", sans-serif;
+
+  background-image: url('https://gemdtp.ohlucinda.com/archive-bg.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+.back-link {
+
+  display: inline-block;
+
+  margin-top: -40px;
+  margin-bottom: 50px;
+
+  text-decoration: none;
+
+  color: #111;
+
+  font-size: 14px;
+
+}
+
+h1 {
+
+  font-size: 40px;
+  margin-bottom: 50px;
+
+  text-align: center;
+
+}
+
+.post-list {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px 30px;
+
+  text-align: center;
+
+}
+
+.post-list a {
+
+  font-size: 24px;
+
+  text-decoration: none;
+
+  color: #111;
+
+  line-height: 1.5;
+
+}
+
+.post-list a:hover {
+
+  opacity: 0.5;
+
+}
+
+</style>
+
+</head>
+
 <body>
 
-<h1>ahrchive</h1>
+<h1>archive</h1>
+
+<a href="{{ site.baseurl }}/" class="back-link">
+  &lt; back
+</a>
 
 <div class="post-list">
 
@@ -32,67 +110,6 @@ permalink: /archive/
 </a>
 
 {% endfor %}
-
-</div>
-
-h1 {
-
-font-size: 40px;
-margin-bottom: 50px;
-
-text-align: center;
-
-}  
-
-</body>
-
-.post-list {
-
-display: grid;
-
-grid-template-columns: repeat(2, 1fr);
-
-gap: 24px 30px;
-
-text-align: center;
-
-}
-
-.post-list a {
-
-font-size: 24px;
-
-text-decoration: none;
-
-color: #111;
-
-line-height: 1.5;
-
-}
-
-.post-list a:hover {
-
-opacity: 0.5;
-
-}  
-
-</style>
-
-</head>
-
-<body>
-
-<h1>ahrchive</h1>
-
-<div class="post-list">
-
-{% for post in site.posts %}
-
-<a href="{{ post.url | relative_url }}">
-{{ post.title }}
-</a>
-
-{% endfor %}  
 
 </div>
 
