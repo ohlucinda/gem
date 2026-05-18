@@ -19,34 +19,27 @@ permalink: /archive/
 
 <style>
 
-body {
+<body>
 
-margin: 40px 24px;
-background: #fff;
-font-family: "jimbo-std-expanded", sans-serif;
+<h1>ahrchive</h1>
 
-background-image: url('https://gemdtp.ohlucinda.com/archive-bg.jpg');
+<a href="{{ site.baseurl }}/" class="back-link">
+  &lt; back
+</a>
 
-background-size: cover;
+<div class="post-list">
 
-background-position: center;
+{% for post in site.posts %}
 
-}  
+<a href="{{ post.url | relative_url }}">
+{{ post.title }}
+</a>
 
-.back-link {
+{% endfor %}
 
-display: inline-block;
+</div>
 
-margin-top: -40px;
-margin-bottom: 50px;
-
-text-decoration: none;
-
-color: #111;
-
-font-size: 14px;
-
-}  
+</body>
 
 h1 {
 
