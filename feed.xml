@@ -1,0 +1,57 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+
+  <channel>
+
+    <title>gem</title>
+
+    <link>https://gem.ohlucinda.com/</link>
+
+    <description>
+      gem by OHLUCINDA
+    </description>
+
+    <image>
+
+      <url>
+        https://gem.ohlucinda.com/apple-touch-icon.png
+      </url>
+
+      <title>gem</title>
+
+      <link>https://gem.ohlucinda.com/</link>
+
+    </image>
+
+    <webfeeds:icon>
+      https://gem.ohlucinda.com/apple-touch-icon.png
+    </webfeeds:icon>
+
+    <webfeeds:accentColor>
+      #ffffff
+    </webfeeds:accentColor>
+
+    {% for post in site.posts %}
+
+    <item>
+
+      <title>{{ post.title }}</title>
+
+      <link>
+        https://gem.ohlucinda.com{{ post.url }}
+      </link>
+
+      <description>
+        {{ post.excerpt | strip_html | strip_newlines }}
+      </description>
+
+    </item>
+
+    {% endfor %}
+
+  </channel>
+
+</rss>
